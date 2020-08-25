@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-Dt-ydK">
+                                <rect key="frame" x="120" y="714" width="174" height="48"/>
+                                <color key="backgroundColor" red="0.82885143937929273" green="1" blue="0.99648895913846103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="iyS-Wa-rbf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Play Animation">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQY-DC-hIo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuZ-h5-kbX">
+                                <rect key="frame" x="182" y="654" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cYu-zp-WT7"/>
+                                    <constraint firstAttribute="width" constant="50" id="lw1-0h-dLp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oo5-Ce-p22">
+                                <rect key="frame" x="182" y="244" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="RYl-sR-0g7"/>
+                                    <constraint firstAttribute="height" constant="50" id="UP5-NH-lxh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oo5-Ce-p22" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="76A-Te-Y5r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdb-Dt-ydK" secondAttribute="trailing" constant="120" id="F1P-Yh-VHZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qdb-Dt-ydK" secondAttribute="bottom" constant="100" id="UE6-AF-w0R"/>
+                            <constraint firstItem="qdb-Dt-ydK" firstAttribute="top" secondItem="RuZ-h5-kbX" secondAttribute="bottom" constant="10" id="eTc-Uj-G4a"/>
+                            <constraint firstItem="oo5-Ce-p22" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lSw-zJ-klG"/>
+                            <constraint firstItem="qdb-Dt-ydK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="lXx-Hf-u0u"/>
+                            <constraint firstItem="RuZ-h5-kbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wlv-oK-Pk2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="RuZ-h5-kbX" id="YMc-q5-NyD"/>
+                        <outlet property="animation_State" destination="qdb-Dt-ydK" id="0tr-rJ-uoo"/>
+                        <outlet property="loadview" destination="oo5-Ce-p22" id="kdT-8x-RfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+</document>
